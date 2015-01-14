@@ -43,4 +43,6 @@ AmahiHDA::Application.routes.draw do
 
   match ':controller(/:action(/:id))(.:format)', via: [:get]
 
+  get "/user_registrations/edit", to: "user_registrations#edit"
+  post "/user_registrations/update", to: "user_registrations#update"
 end

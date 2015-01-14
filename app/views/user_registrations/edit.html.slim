@@ -1,0 +1,17 @@
+h2
+  | Change Password for
+  = @user.login
+
+form action="/user_registrations/update" method="post"
+  .form-group
+    label for="InputPassword1"  Enter Password
+    input#InputPassword1.form-control name="password_orig" placeholder="Password" type="password" required="true" /
+    input type="hidden" value="#{@user.id}" name="user_id"
+  .form-group
+    label for="InputPassword2" New Password
+    input#InputPassword2.form-control name="password" placeholder="New password" type="password" required="true"/
+  .form-group
+    label for="InputPassword3" Confirm new Password
+    input#InputPassword3.form-control name="password_conf" placeholder="New password confirmation" type="password" required="true"/
+
+  button.btn.btn-default type="submit"  Submit
